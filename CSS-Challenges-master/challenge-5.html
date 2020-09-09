@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Challenge 5</title>
+  <style>
+    /* Style the weather report */
+
+    /* Apply the following styles to the body */
+      /* font family 'Helvetica Neue' */
+      body{
+        font-family: 'Noto Sans KR', sans-serif;
+       
+        
+     
+      /* font size 20px */
+      font-size: 20px;
+
+      /* line height 1.5 */
+        line-height: 1.5%;
+      /* Color #333 dark gray */
+      color: #eee;
+      /* background color #eee light gray */
+      background-image: url("https://i.redd.it/v4my3ccvqg3y.jpg");
+      /* background-repeat: no-repeat; */
+      background-size: cover;
+      
+      
+      }
+      
+
+    /* Style the dt (definition title) */
+    dt {
+      font-size: 2em;
+    
+      /* Make the font really big! 2em */
+      font-size:2em;
+      /* Make the background color light gray #ccc */
+      background-color: #ccc;
+      display: flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      flex-flow:wrap;
+     
+      align-items:center;
+      align-content:center;
+
+     } 
+    
+
+    /* Style the dd (definition) */
+    dd{
+      /* make the font big 1.5em */
+      font-size:1.5em;
+      /* Background color #ddd */
+      background-color: #ddd;
+      /* Remove the by setting margin: 0 */
+      margin:0%; 
+      display: flex;
+      flex-direction:row; 
+      flex-wrap:wrap; 
+      flex-flow:wrap;
+      justify-content:space-between;
+      align-items:center;
+      align-content:center;
+    }
+      
+      
+
+
+    /* Style both the dt and dd */
+    /* Using the comma groups selectors */
+    dt, dd {
+      /* Add some space between these elements and their content */
+      /* padding: 0.5em */
+      padding: 0.5em;
+      background-color:hsla(120,100%,50%,0.3);
+      
+      display: flex;
+      /* flex-direction:column;
+      flex-wrap:wrap;
+      flex-flow:wrap; */
+      justify-content:center;
+      align-items:center;
+      align-content:center; 
+      
+    }
+
+    header {
+
+      text-align:center;
+      /* flex-direction:row;
+      flex-wrap:wrap;
+      flex-flow:wrap;
+      justify-content:space-evenly;
+      
+      align-content:center; */
+       
+  
+    }
+   
+    /* Stretch Challenges: 
+    
+    - Adjust these styles to your taste. What do you think would 
+    look best here? 
+    - Edit the HTML, add a new list item with a new weather report. 
+      - 06 March 2018 
+      - Partially cloudy
+      - 07 March 2018
+      - Sunny and clear
+    - Change the background color for each row. You want the rows to be 
+    light blue with the two rows using a different shade of blue. 
+    - Use text-align to move the heading text to the right. 
+
+     */
+
+  </style>
+</head>
+
+<body>
+
+<article>
+  <header>
+    <h1 id='seattle'>Weather forecast for Seattle</h1>
+    <p>Three day forecast</p>
+  </header>
+  <dl>
+    <dt><time datetime="2018-03-03">03 March 2018</time></dt>
+    <dd>Thunderstorm.</dd>
+
+    <dt><time datetime="2018-03-04">04 March 2018</time></dt>
+    <dd>Periods of rain.</dd>
+
+    <dt><time datetime="2018-03-05">05 March 2018</time></dt>
+    <dd>Heavy rain.</dd>
+  </dl>
+</article>
+
+</body>
+</html>

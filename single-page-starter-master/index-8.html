@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Red September</title>
+		<style>
+			body {
+				margin: 0;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+				background-color: #1d1818;
+				line-height: 1.5;
+			}
+
+			nav, main > section {
+				overflow: auto;
+			}
+
+			main > section, main > footer {
+				min-height: 100vh;
+			}
+
+			/* Style the nav bar */
+			#nav {
+				justify-content: space-between;
+				align-items: baseline;
+				padding: 1em;
+				background-color: #1d1818;
+				color: #eee;
+				display: flex;
+			}
+
+			nav h1, ul {
+				margin: 0
+			}
+
+			nav a {
+				text-decoration: none;
+				color:red;
+			}
+
+			nav ul {
+				display: flex;
+				list-style: none;
+			}
+
+			nav ul a {
+				padding: 1em;
+				color: red;
+			}
+
+			nav ul a:hover {
+				color: pink;
+			}
+
+			#title_page {
+				background-color: #26B63E;
+				background-image: url(images/whaoo.PNG);
+				background-size: cover;
+				background-repeat: no-repeat;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 4em;
+				color: #fff;
+			}
+
+			#mother_climate_change > div {
+				position: relative;
+				left: -120px;
+				top: 120px;
+			}
+
+			#mother_climate_change h2, #mother_climate_change {
+				margin: 0;
+				text-shadow: 0 0 20px red;
+			}
+
+
+			/* Create some cards in this section */
+			#mother_climate_change {
+				background-image: url(images/mother_of_climate_change.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-repeat: no-repeat;
+				/* display: flex;
+				justify-content: center;
+				align-items: flex-start; */
+			}
+
+			
+			#mother_climate_change > h2 {
+				margin: 1em;
+				font-size: 3em;
+				text-align: center;
+				color: #eee;
+			}
+			#mother_climate_change > p {
+				margin: 1em;
+				font-size: 3em;
+				text-align: right;
+				color: #eee;
+				
+			}
+
+			#denver-heat {
+				background-color: #5856D6;
+				background-image: url(images/carlos-0.jpg);
+				background-size: cover;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			#denver-heat > div {
+				background-color:rgba(255, 255, 255, 0.65);
+				padding: 2em;
+				width: 75%;
+				max-width: 700px;
+			}
+
+			#denver-heat  h2 {
+				font-size: 4em;
+				margin: 0 0 1rem 0;
+				text-align: center;
+			}
+
+
+			/* Style this */
+			#denver-snow {
+				background-color: #461c3b;
+				display: flex;
+				color: #fff;
+				background-image: url(images/sound-texture.jpg);
+				background-size: cover;
+			}
+
+			#denver-snow > div {
+				display: flex;
+				justify-content: center;
+				width: 75%;
+				margin: auto;
+			}
+
+			#suzanne-ciani h2, #suzanne-ciani p {
+				margin: 0 0 1rem 0;
+			}
+
+			#suzanne-ciani h2 {
+				font-size: 2em;
+			}
+
+			#suzanne-ciani > div > div:nth-child(1) {
+				flex: 3;
+				margin: 0 2em 0 0;
+			}
+
+			#suzanne-ciani > div > div:nth-child(2) {
+				flex: 2;
+			}
+
+			#suzanne-ciani > div img {
+				width: 100%;
+				box-shadow:0 0 22px rgba(0, 0, 0, 0.44);
+			}
+
+			#sf-heat > div {
+				position: relative;
+				left: -120px;
+				top: 120px;
+			}
+
+			#sf-heat h2, #sf-heat {
+				margin: 0;
+				text-shadow: 0 0 20px red;
+			}
+
+
+			/* Create some cards in this section */
+			#sf-heat {
+				background-image: url(images/mother_of_climate_change.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-repeat: no-repeat;
+				/* display: flex;
+				justify-content: center;
+				align-items: flex-start; */
+			}
+
+			
+			#sf-heat > h2 {
+				margin: 1em;
+				font-size: 3em;
+				text-align: center;
+				color: #eee;
+			}
+			#sf-heat > p {
+				margin: 1em;
+				font-size: 3em;
+				text-align: right;
+				color: #eee;	
+			}
+			
+			#sf-fire {
+				background-color: #5856D6;
+				background-image: url(images/carlos-0.jpg);
+				background-size: cover;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			#sf-fire > div {
+				background-color:rgba(255, 255, 255, 0.65);
+				padding: 2em;
+				width: 75%;
+				max-width: 700px;
+			}
+
+			#sf-fire  h2 {
+				font-size: 4em;
+				margin: 0 0 1rem 0;
+				text-align: center;
+			}
+
+			
+
+			#wind {
+				background-color: #5856D6;
+				background-image: url(images/carlos-0.jpg);
+				background-size: cover;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			#wind > div {
+				background-color:rgba(255, 255, 255, 0.65);
+				padding: 2em;
+				width: 75%;
+				max-width: 700px;
+			}
+
+			#wind  h2 {
+				font-size: 4em;
+				margin: 0 0 1rem 0;
+				text-align: center;
+			}
+
+
+			#san-francisco {
+				background-color: #5856D6;
+				background-image: url(images/carlos-0.jpg);
+				background-size: cover;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			#san-francisco > div {
+				background-color:rgba(255, 255, 255, 0.65);
+				padding: 2em;
+				width: 75%;
+				max-width: 700px;
+			}
+
+			#san-francisco  h2 {
+				font-size: 4em;
+				margin: 0 0 1rem 0;
+				text-align: center;
+			}
+
+			#contact {
+				background-color: #FF9500;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			#contact > form {
+				display: flex;
+			}
+
+			#contact > form > div {
+				display: flex;
+				flex-direction: column;
+			}
+
+			#contact label {
+				display: flex;
+				flex-direction: column;
+			}
+
+			label {
+				margin: 1em 0;
+			}
+
+			label span {
+				margin: 1em 0;
+			}
+
+			input, textarea {
+				border: 1px solid #000;
+				padding: 0.5em;
+				margin: 0 2em 0 0;
+				width: 20em;
+				font-size: 1em;
+			}
+
+			textarea {
+				height: 9em;
+				margin: 0 0 0 0;
+			}
+
+			form button {
+				width: auto;
+				font-size: 1em;
+				margin: 1em 0;
+				align-self: flex-end;
+				padding: 0.5em 1em;
+				background-color:rgb(0, 0, 0);
+				color: #fff;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+
+		<main>
+			<nav id="nav">
+				<h1><a href="#">Red September</a></h1>
+				<ul>
+					<li><a href="#mother-climate-change">Mother Climate Change</a></li>
+					<li><a href="#the-great-evil-scheme">The Great Evil Scheme</a></li>
+					<li><a href="#team-assembly">Assembly</a></li>
+					<li><a href="#suzanne-ciani">Suzanne Ciani</a></li>
+				</ul>
+			</nav>
+		
+			<section id="title_page">
+				<div>
+					<h2>Red September</h2>
+					<p>Attack of Mother of Climate Changes</p>
+				</div>
+			</section>
+		
+			<section id="mother_climate_change">
+				<h2>Mother Climate Change</h2>
+				<p>Climate Change or increase CO2 levels in our atmoshpere is causing unpredictable weather patterns</p>
+			</section>
+		
+			<section id="denver-heat">
+				<div>
+					<h2>Denver</h2>
+					<p>Temperatures were around 93 on Monday at 2 p.m.  Denver will need a 61-degree drop to jump into the top-five records in the city's weather history.
+						As temperatures continued to rise throughout Labor Day weekend, hot temperatures, dry conditions and gusty winds caused critical fire danger warnings, forced evacuations and closed the main road through Rocky Mountain National Park.
+						By Monday, the hot weather accelerated fire growth at Cameron Peak to 89,312 acres with 4% containment, according the United States Forest Service (USFS).
+						Until the cold front passes through the area Monday night, much of the mountains in Colorado are very warm with critical fire danger.</p>
+				</div>
+			</section>
+		
+			<section id="denver-snow">
+				<div>
+					<div>
+						<h2>Snow</h2>
+						<p>before plummeting Monday night into Tuesday morning. A low of 35 degrees is being predicted for Monday night.
+							A near 60-degree drop is historic for a city where these sort of fluctuations are not unheard of.</p>
+					</div>
+					<div>
+						<img src="images/ciani-2.jpg">
+					</div>
+
+				</div>
+				<figure>
+					<img>
+				</figure>
+			</section>
+		
+			<section id="sf-heat">
+				<h2>San Francisco Heat Wave</h2>
+				<p>
+					San Francisco hit 100 degrees for the 1st time since 2017. 
+					Concord, Livermore, Gilroy, Napa and Santa Rosa had high 
+					temperatures between 110 and 112, all records for this date.
+				</p>			
+			</section>
+
+			<section id="sf-fire">
+				<div>
+					<h2>San Francisco Fire</h2>
+					<p>
+						As of Tuesday, more than two million acres have burned across 
+						the state so far in 2020, which makes this a record year, 
+						surpassing 2018, according to the California Department of
+						Forestry and Fire Protection.
+					</p>
+				</div>			
+			</section>
+		
+			<section id="wind">
+				<div>
+					<h2>Wind</h2>
+					<p>
+						The ingredients responsible for these volatile fire conditions in the 
+						Pacific Northwest are similar to what drives the infamous Santa Ana 
+						winds in Southern California, namely zones of high and low pressure in 
+						close proximity driving offshore winds through the mountains, where they 
+						rush downhill and dry out the air. The high-pressure zone sinking out of 
+						Canada toward the Rockies is abnormally strong for the time of year, while low 
+						pressure lurks along West Coast.
+					</p>
+				</div>
+			</section>
+
+			<section id="san-francisco">
+				<div>
+					<h2>San Francisco</h2>
+					<p>
+						2 days of red air. Felt like living on Mars
+					</p>
+				</div>
+			</section>
+
+			<footer id="contact">
+				<h2>Contact Us</h2>
+				<form>
+					<div>
+						<label>
+							<span>Name</span>
+							<input type="text">
+						</label>
+			
+						<label>
+							<span>Email</span>
+							<input type="email">
+						</label>
+					</div>
+					<div>
+						<label>
+							<span>Message</span>
+							<textarea></textarea>
+						</label>
+						<button type="submit">Send</button>
+					</div>
+				</form>
+			</footer>
+		</main>
+	</body>
+</html>

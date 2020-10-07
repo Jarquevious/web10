@@ -1,0 +1,29 @@
+#divone {
+    display: flex;
+    flex-direction: column;
+}
+
+#divtwo {
+    
+}
+
+#student-info {
+    
+    border-style: solid;
+    
+    float: left;
+    width: 30em;
+    padding: 10px;
+    height: 300px; 
+    margin: 10px
+}
+
+#data-input {
+    border-style: solid;
+    width: 30em;
+    padding: 10px;
+}
+
+#headline-display {
+    border-style: solid;
+}

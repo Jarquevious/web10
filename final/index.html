@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Jarquevious Nelson - Final - Web 1.0</title>
 </head>
 <body>
+   
+    <div id="divone">
     <section id="student-info">
         <h1>Jarquevious Nelson</h1>
         <p>My Favorite color is green and I wear flip flops</p>
@@ -14,13 +17,16 @@
     <!-- Section 2 -->
     
     <!-- Select Font Size -->
+  
     <section id="data-input">
         <h1 id="font-styler">Font Styler</h1>
 
         <!-- Font Size Input -->
+        <h3>Enter a Font Size</h3>
         <input id="input-size" type="number">
         
         <!-- Select Font -->
+        <h3>Select Font</h3>
         <select id="select-font">
             <option value="helvetica">Helvetica</option>
             <option value="arial">Arial</option>
@@ -29,20 +35,38 @@
         </select>
         
         <!-- Font Color -->
+        <h3>Select Font Color</h3>
         <input id="input-color" type="color" value="#000">
 
         <!-- Background Color -->
+        <h3>Select Background Color</h3>
         <input id="input-bg-color" type="color" value="#fff">
 
         <!-- Enter Text   -->
-        <textarea id="enter-text">
+        <h3>Enter Text</h3>
+        <textarea id="enter-text"></textarea>
     </section>
-   
+    </div>
+    
+    <div id="divtwo">
     <section id="headline-display">
-
+        <h1 id="display">Test</h1></div>
     </section>
+
     <section id="data-output">
-
+        <h1>Font Styler</h1>
+        <pre><code>.headline {
+            font-size: <span id="show-size">16</span>px;
+            font-family: <span id="show-font">Times</span>;
+            color: <span id="show-color">#000</span>;
+            background-color: <span id="show-bg-color">#fff</span>;
+        }</code></pre>
     </section>
+</div>
+
+    <script>
+        src="myscripts.js"
+    </script>
+   
 </body>
 </html>

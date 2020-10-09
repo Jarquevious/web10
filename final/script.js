@@ -1,40 +1,53 @@
-//Defining new variable
+//Defining new variables
 const inputSize = document.querySelector('#input-size')
+const showSize = document.querySelector('#show-size')
 const display = document.querySelector('#display')
 const inputColor = document.querySelector('#input-color')
-const inputBgColor = document.querySelector('#input-bg-color')
-const showSize = document.querySelector('#show-size')
 const showColor = document.querySelector('#show-color')
 const selectFont = document.querySelector('#select-font')
 const showFont = document.querySelector('#show-font')
 const enterText = document.querySelector('#enter-text')
+const showBgColor = document.querySelector('#show-bg-color')
+const inputBgColor = document.querySelector('#input-bg-color')
 
 //Define a function
 function handleInput() {
-    // console.log(inputSize.value)
+    //Font Size--------------------------------------->
     display.style.fontSize = inputSize.value + 'px'
-    display.style.color = inputColor.value 
-    display.style.backgroundColor = inputBgColor.value
-    display.style.fontFamily = selectFont.value
-   
-    inputBgColor.innerHTML = inputBgColor
-    display.innerHTML = enterText.value
     showSize.innerHTML = inputSize.value
-    showColor.innerHTML = inputColor.value
+    
+    //Font-------------------------------------------->
+    display.style.fontFamily = selectFont.value
     showFont.innerHTML = selectFont.value
+    
+    //Color------------------------------------------->
+    showColor.innerHTML = inputColor.value
+    display.style.color = inputColor.value 
+   
+    //Enter Text-------------------------------------->
+    display.innerHTML = enterText.value
 
+    //Background color-------------------------------->
+    inputBgColor.innerHTML = inputBgColor
+    display.style.backgroundColor = inputBgColor.value
+    showBgColor.innerHTML = inputBgColor.value
 }
 
-//Adding Event listener
+//Event listener for input size---------------------------------->
 inputSize.addEventListener('input', handleInput)
 
-//Event Listener for color
+//Event Listener for color--------------------------------------->
 inputColor.addEventListener('input', handleInput)
 
-//Event Listener for bg-color
+//Event Listener for bg-color------------------------------------>
 inputBgColor.addEventListener('input', handleInput)
 
-//add event listener for font selector, enter text, use handle input function
+//Event Listener for Font---------------------------------------->
 selectFont.addEventListener('input', handleInput)
 
+//Event Listener for enter text---------------------------------->
 enterText.addEventListener('input', handleInput)
+
+
+
+

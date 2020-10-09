@@ -1,47 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
     <title>Calculator</title>
 </head>
+<style>
+    html, body, .container-fluid {
+        font-family: lato bold;
+        font-size: xx-large;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .white {
+        
+    width: 90px;
+    height: .5em;
+    border: 0; border-top: 1px solid #c62727;
+    }
+    
+    .container-fluid,
+    .overlay:before {
+        background: url(https://cdn.pixabay.com/photo/2015/09/26/21/33/suspension-bridge-959853_960_720.jpg) no-repeat 0 0  / cover ;
+
+    }
+
+    .card {
+        color: gray;
+    }
+    
+    .container-fluid {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .overlay {
+        margin: 0 auto; 
+        max-width: 768px; 
+        overflow: hidden;
+        padding: 20px;
+        position: relative;
+        color: white;
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        z-index: 0;
+    }
+    
+    .overlay:before {
+        content: '';
+        filter: blur(20px);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    
+    #bill {
+        display: none;
+    }
+
+    
+</style>
+
 <body>
+    <div class="container-fluid">
+        <div class="overlay">
+            <h1 id='title'>Tip Calculator</h1>
+            <hr class="white">
+            
 
     <!-- Inputs ----------------------------------------------------->
-    <label for="bill">Bill</label>
-    <input id="bill" type="number" name="bill">
+    <div class="card mb-4" id="bill-card">
+        <div class="card-body ">
+            <div class="d-flex  justify-content-between mb-2">
+                <h1>Bill Amount: </h1>
+                <input id="bill" type="number" class="form-control" name="bill">
+            </div>
 
-    <label for="tip">Tip %</label>
-    <input id="tip" type="number" name="tip">
-    
-    <label for="input-people">Number of People</label>
-    <input id="input-people" type="number"> 
-   
+            <div class="d-flex justify-content-between">
+                <h1>Tip %</h1>
+                <input id="tip" type="number" class="form-control" name="tip">
+            </div>
+            <div class="d-flex justify-content-between">
+                <h1>Number of People </h1>
+                <input id="input-people"  class="form-control" type="number" placeholder=""  min="00.00" max="100.00">
+            </div>
+            <button type="button" class="btn btn-outline-success btn-lg btn-block" onclick="calcTip()">Calculate Tip Total</button>
+
+        </div>
+    </div>
+
     <!-- Results ------------------------------------------------------>
-    <h1 id='display-tip'>Tip: </h1>
-    <h1  id='display-total'>Total: </h1>
-    
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="form-row">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                <div>
+                    <h1 id='display-tip'>Tip: </h1>
+                </div>
+                
+                <div><h1 id='display-total'>Total: </h1></div>
+
+    </div>
     <!-- Script-------------------------------------------------------->
     <script>
+        function calcTip() {
+
+        
         // Your code here...
+        
+        //Grab input values
         const billInput = document.querySelector('#bill')
         const tipInput = document.querySelector('#tip')
         const peopleInput = document.querySelector('#input-people')
         const displayTip = document.querySelector('#display-tip')
         const displayTotal = document.querySelector('#display-total')
 
-        billInput.addEventListener('input', function(e) {
-            const bill = parseFloat(billInput.value)
-            const percent = parseFloat(tipInput.value)
-            const people = parseInt(peopleInput.value)
-            const tip = bill * percent / 100
-            const total = bill + tip
- 
+        billInput.addEventListener('bill', function(e) {
+            
 
     })
 
+        tipInput.addEventListener('input', function(e) {
+            const percent = parseFloat(tipInput.value)
+            const tip = bill * percent / 100
+            const total = bill + tip
 
 
-      </script>
+    })
+
+        peopleInput.addEventListener('input', function(e) {
+  
+    })
+        let btn = addEventListener('input', function (e) {
+          
+            //turn strings into numbers
+            const bill = parseFloat(billInput.value)
+   
+            
+            //Calculations
+            const tip = bill * percent / 100
+            const total = bill + tip
+        })
+            displayTotal.innerHTML = total
+            displayTip.innerHTML = tip
+    }
+        
+
+    </script>
 </body>
+
 </html>

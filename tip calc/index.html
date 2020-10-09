@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+            font-style: normal;
+            color: black;
+            background-color: whitesmoke;
+        }
+        
+        main > input {
+            padding: .7em;
+            border: 1px solid;
+            box-shadow: 5px 10px 8px blue
+        }
+
+        .tipamount {
+            color:tomato;
+            font-family: cursive;
+            font-size: larger;
+        }
+    </style>
+    <title>Document</title>
+</head>
+    <body>
+        <main>
+            <hi>Tip Calc</hi>
+            <div id="display"><em>0.00</em></div>
+            <input id="bill" value="10.00" type="number">
+            <input id="tip" value="15" type="number">
+        </main>
+    <script src="script.js"></script>
+    </body>
+</html>

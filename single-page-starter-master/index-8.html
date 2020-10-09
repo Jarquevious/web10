@@ -71,19 +71,18 @@
 
 			#mother_climate_change h2, #mother_climate_change {
 				margin: 0;
-				text-shadow: 0 0 20px red;
+				
 			}
 
 
 			/* Create some cards in this section */
 			#mother_climate_change {
 				background-image: url(images/mother_of_climate_change.png);
-				background-repeat: no-repeat;
-				background-size: cover;
+				background-size:cover;
 				background-repeat: no-repeat;
 				/* display: flex;
 				justify-content: center;
-				align-items: flex-start; */
+				align-items:stretch; */
 			}
 
 			
@@ -94,19 +93,31 @@
 				color: #eee;
 			}
 			#mother_climate_change > p {
+				
 				margin: 1em;
-				font-size: 3em;
+				font-size: 1.8em;
 				text-align: right;
 				color: #eee;
+				border: 2px solid powderblue;
+				display: flex;
+				justify-content: center;
+				align-items:stretch;
+
+				width:400px;
+				
+
 				
 			}
 
 			#denver-heat {
 				background-color: #5856D6;
-				background-image: url(images/carlos-0.jpg);
-				background-size: cover;
+				background-image: url(images/11.png);
+				background-size:cover;
+				background-repeat: no-repeat;
+				background-position: 100px;
+				background-position-x: 10px;
 				display: flex;
-				justify-content: center;
+				justify-content: flex-end;
 				align-items: center;
 			}
 
@@ -115,6 +126,9 @@
 				padding: 2em;
 				width: 75%;
 				max-width: 700px;
+				
+
+				
 			}
 
 			#denver-heat  h2 {
@@ -133,11 +147,25 @@
 				background-size: cover;
 			}
 
-			#denver-snow > div {
+			/* #denver-snow > div {
 				display: flex;
 				justify-content: center;
 				width: 75%;
 				margin: auto;
+			} */
+			 
+			#denver-snow > div:nth-child(1) {
+				flex: 2;
+				padding: 2em;
+
+			}
+
+			#denver-snow > div:nth-child(2) {
+				flex:1;
+			}
+
+			#denver-snow > div:nth-child(2) > img {
+				width: 100%;
 			}
 
 			#suzanne-ciani h2, #suzanne-ciani p {
@@ -329,10 +357,10 @@
 			<nav id="nav">
 				<h1><a href="#">Red September</a></h1>
 				<ul>
-					<li><a href="#mother-climate-change">Mother Climate Change</a></li>
-					<li><a href="#the-great-evil-scheme">The Great Evil Scheme</a></li>
-					<li><a href="#team-assembly">Assembly</a></li>
-					<li><a href="#suzanne-ciani">Suzanne Ciani</a></li>
+					<li><a href="#mother_climate_change">Mother Climate Change</a></li>
+					<li><a href="#denver-heat">Denver</a></li>
+					<li><a href="#sf-heat">San Fracisco</a></li>
+					<li><a href="#san-francisco">The Result</a></li>
 				</ul>
 			</nav>
 		
@@ -359,20 +387,15 @@
 			</section>
 		
 			<section id="denver-snow">
-				<div>
+				
 					<div>
 						<h2>Snow</h2>
 						<p>before plummeting Monday night into Tuesday morning. A low of 35 degrees is being predicted for Monday night.
 							A near 60-degree drop is historic for a city where these sort of fluctuations are not unheard of.</p>
 					</div>
 					<div>
-						<img src="images/ciani-2.jpg">
+						<img src="images/the_sun.JPG">
 					</div>
-
-				</div>
-				<figure>
-					<img>
-				</figure>
 			</section>
 		
 			<section id="sf-heat">
